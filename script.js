@@ -7,7 +7,7 @@ const nav=$('#nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled
 $('#burger').onclick=()=>$('#menu').classList.toggle('open');$$('#menu a').forEach(a=>a.onclick=()=>$('#menu').classList.remove('open'));
 // copy
 const toast=$('#toast');function showToast(t){toast.textContent=t;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1600)}
-$('#copyBtn').onclick=async()=>{const t=$('#caText').textContent.trim();try{await navigator.clipboard.writeText(t)}catch(e){}showToast(t==='TBA'?'CA TBA':'Copied')};
+$('#copyBtn').onclick=async()=>{const t=$('#caText').textContent.trim();try{await navigator.clipboard.writeText(t)}catch(e){}showToast('Copied')};
 // slash
 function slash(){const i=document.createElement('i');i.style.top=(30+Math.random()*40)+'%';$('#slashFx').appendChild(i);setTimeout(()=>i.remove(),800)}
 setTimeout(slash,300);
